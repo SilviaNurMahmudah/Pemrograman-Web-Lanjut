@@ -28,48 +28,35 @@
 
 <body>
 
-  <main id="main">
   <div id="about" class="about">
 
     <!-- ======= About Me ======= -->
     <div class="about-me container">
-
       <div class="section-title">
-        @section('title')
         <h2>About</h2>
-        <p>{{$article->title}}</p>
-        @endsection
+        <p>{{$Article->title}}</p>
       </div>
 
-      @section('content')
       <div class="row">
         <div class="col-lg-4" data-aos="fade-right">
           <img src="assets/img/me.jpg" class="img-fluid" alt="">
         </div>
         <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>UI/UX &amp; Graphic Designer</h3>
+          <h3>{{$Article->title}} </h3>
           <p class="font-italic">
-            {{$articles->content}}
-          </p>
-          <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+            {{$Article->content}}
           </p>
         </div>
       </div>
-      @endsection
 
     </div><!-- End About Me -->
 
-    
   </div><!-- End About Section -->
 
+<div class="credits">
+  <p>Copyright &copy; Silvia's Website 2020</p>
+</div>
 
-  </main><!-- End #main -->
-
-  <div class="credits">
-    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-  </div>
 
 </body>
 

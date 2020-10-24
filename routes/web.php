@@ -39,3 +39,19 @@ Route::get('/KuisContact', 'Kuis1Controller@KuisContact');
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
+//UTS (ORM)
+Route::get('/manage', 'ArticleController@index')->name('manage');
+
+Route::get('/articleadd','ArticleController@add');
+Route::post('/article/create','ArticleController@create');
+
+Route::get('/articleedit{id}','ArticleController@edit');
+Route::post('/article/update/{id}','ArticleController@update');
+
+Route::get('/article/delete/{id}','ArticleController@delete');
+
+Route::post('/reaction/create','ArticleController@create2');
+Route::get('/reaction/delete/{id}','ArticleController@delete2');
+
+

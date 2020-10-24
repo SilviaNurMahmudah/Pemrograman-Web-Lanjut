@@ -39,6 +39,7 @@
           <li><a href="KuisHome">Home</a></li>
           <li><a href="KuisAbout">About</a></li>
           <li class="active"><a href="#header">Contact</a></li> 
+          <li><a href="{{route('manage')}}">Manage</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 

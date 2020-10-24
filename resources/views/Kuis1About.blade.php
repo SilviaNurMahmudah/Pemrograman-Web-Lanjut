@@ -40,6 +40,7 @@
           <li><a href="KuisHome">Home</a></li>
           <li class="active"><a href="#header">About</a></li>
           <li><a href="KuisContact">Contact</a></li>
+          <li><a href="{{route('manage')}}">Manage</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -114,7 +115,7 @@
           <div class="count-box">
             <i class="icofont-document-folder"></i>
             <span data-toggle="counter-up">15</span>
-            <p>Projects</p>
+            <p>Article</p>
           </div>
         </div>
 
@@ -130,7 +131,8 @@
       </div>
     </div><!-- End Counts -->
   
-   
+       
+
     <!-- ======= Services Section ======= -->
   <div id="services" class="services">
     <div class="container">
@@ -145,20 +147,20 @@
         @foreach($Reaction as $Re)
         <div class="col-lg-4 col-md-6 d-flex align-items-stretch">  
           <div class="icon-box">
+          
             <div class="icon"><i class="bx bx-file"></i></div>
             <h4><a href="">{{$Re->name}}</a></h4>
             <p>{{$Re->content}}</p>
           </div>
         </div>
         @endforeach
+        <br>
       </div>
-     
-      
+     <br><br>
     </div>
   </div><!-- End Services Section -->
   
-
-  </div>
+</div>
 
 
   <div class="credits">

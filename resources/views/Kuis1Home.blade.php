@@ -48,6 +48,7 @@
           <li class="active"><a href="#header">Home</a></li>
           <li><a href="KuisAbout">About</a></li>
           <li><a href="KuisContact">Contact</a></li>
+          <li><a href="{{route('manage')}}">Manage</a></li>
         </ul>
       </nav><!-- .nav-menu -->
 
@@ -79,7 +80,7 @@
             <div class="portfolio-info">
               <!-- <h4>Artikel {{$ar->id}}</h4> -->
               <h4>{{$ar->title}}</h4><br> <!-- ini judul -->
-              <p>{{$ar->content}}</p> <!-- ini content -->
+              <p>{{Str::limit($ar->content, 400, '...')}}</p> <!-- ini content -->
               <div class="portfolio-links">
                 <a href="{{$ar->imageUrl}}" data-gall="portfolioGallery" class="venobox" title="image {{$ar->id}}"><i class="bx bx-plus"></i></a>
                 <a href="KuisArticle/{{$ar->id}}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Read More..."><i class="bx bx-link"></i></a>
@@ -94,26 +95,46 @@
 
   <div id="contact" class="contact">'
     <div class="container">
-      <form class="php-email-form mt-4">
-
+      <div class="section-title">
+        <h2>Add Comment</h2>
+      </div>
+      <form class="php-email-form mt-4" action="/reaction/create" method="post">
+        @csrf
         <div class="form-group">
           <input type="text" class="form-control" name="name" id="name" placeholder="Name" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
           <div class="validate"></div>
         </div>
 
         <div class="form-group">
-          <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+          <textarea class="form-control" name="content" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
           <div class="validate"></div>
         </div>
 
-        <div class="text-center"><button type="submit">Send Comment</button></div>
+        <div class="text-center"><button type="submit" name ="add">Send Comment</button></div>
       </form>
     </div>
   </div>
+
 @endsection
+</body>
 
 <div class="credits">
     <p>Copyright &copy; Silvia's Website 2020</p>
 </div>
+
+
+  <!-- Vendor JS Files -->
+  <script src="kuis1/vendor/jquery/jquery.min.js"></script>
+  <script src="kuis1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="kuis1/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="kuis1/vendor/php-email-form/validate.js"></script>
+  <script src="kuis1/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="kuis1/vendor/counterup/counterup.min.js"></script>
+  <script src="kuis1/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="kuis1/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="kuis1/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="kuis1/js/main.js"></script>
 
 </html>
