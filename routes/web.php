@@ -32,9 +32,9 @@ Route::get('/articles/{id}', 'HomeController1@getById');
 
 //KUIS 1
 Route::get('/KuisHome', 'Kuis1Controller@KuisHome');
-Route::get('/KuisArticle/{id}', 'Kuis1Controller@KuisArticle');
-Route::get('/KuisAbout', 'Kuis1Controller@KuisAbout');
-Route::get('/KuisContact', 'Kuis1Controller@KuisContact');
+Route::get('/KuisArticle{id}', 'Kuis1Controller@KuisArticle');
+Route::get('/about', 'Kuis1Controller@KuisAbout')->name('about');
+Route::get('/contact', 'Kuis1Controller@KuisContact')->name('contact');
 
 
 Auth::routes();

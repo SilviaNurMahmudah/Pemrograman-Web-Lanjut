@@ -1,59 +1,8 @@
-@extends('layouts.app')
+@extends('layouts.master')
 
-<!DOCTYPE html>
-<html lang="en">
+@section('judul','Home')
 
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Home</title>
-  <meta content="" name="descriptison">
-  <meta content="" name="keywords">
-
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="kuis1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="kuis1/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="kuis1/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="kuis1/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="kuis1/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="kuis1/vendor/venobox/venobox.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="kuis1/style.css" rel="stylesheet">
-
-</head>
-
-<body>
-@section('content')
-
-  @if (session('status'))
-    <div class="alert alert-success" role="alert">
-      {{ session('status') }}
-    </div>
-  @endif
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="header-tops">
-    <div class="container">
-      <h1>Silvia Nur Mahmudah</h1>
-      <h2>Welcome to <span>  My Website</span></h2>
-
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#header">Home</a></li>
-          <li><a href="KuisAbout">About</a></li>
-          <li><a href="KuisContact">Contact</a></li>
-          <li><a href="{{route('manage')}}">Manage</a></li>
-        </ul>
-      </nav><!-- .nav-menu -->
-
-    </div>
-  </header><!-- End Header -->
+@section('konten')
 
     <!-- ======= artikel ======= -->
   <div id="portfolio" class="portfolio">
@@ -83,7 +32,7 @@
               <p>{{Str::limit($ar->content, 400, '...')}}</p> <!-- ini content -->
               <div class="portfolio-links">
                 <a href="{{$ar->imageUrl}}" data-gall="portfolioGallery" class="venobox" title="image {{$ar->id}}"><i class="bx bx-plus"></i></a>
-                <a href="KuisArticle/{{$ar->id}}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Read More..."><i class="bx bx-link"></i></a>
+                <a href="KuisArticle{{$ar->id}}" data-gall="portfolioDetailsGallery" data-vbtype="iframe" class="venobox" title="Read More..."><i class="bx bx-link"></i></a>
               </div>
             </div>
           </div>
@@ -93,7 +42,7 @@
     </div>
   </div><!-- End Artikel -->
 
-  <div id="contact" class="contact">'
+  <div id="contact" class="contact">
     <div class="container">
       <div class="section-title">
         <h2>Add Comment</h2>
@@ -114,27 +63,5 @@
       </form>
     </div>
   </div>
-
+  <br><br>
 @endsection
-</body>
-
-<div class="credits">
-    <p>Copyright &copy; Silvia's Website 2020</p>
-</div>
-
-
-  <!-- Vendor JS Files -->
-  <script src="kuis1/vendor/jquery/jquery.min.js"></script>
-  <script src="kuis1/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="kuis1/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="kuis1/vendor/php-email-form/validate.js"></script>
-  <script src="kuis1/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="kuis1/vendor/counterup/counterup.min.js"></script>
-  <script src="kuis1/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="kuis1/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="kuis1/vendor/venobox/venobox.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="kuis1/js/main.js"></script>
-
-</html>
