@@ -14,6 +14,7 @@
       </div>
 
       <a href="/articleadd"  class="btn btn-primary">Tambah Data</a>
+      <a href="/article/cetak_pdf" class="btn btn-primary" target="_blank">Cetak PDF</a>
 
       <br><br>
       
@@ -37,7 +38,7 @@
         <p>Manage My Reaction</p>
       </div>
 
-      <!-- manage article -->
+      <!-- manage reaction -->
       <div class="row">
         @foreach($reaction as $r)
         <div class="col-lg-6">
@@ -53,7 +54,6 @@
     </div>
   </div>
   <br><br>
-</header>
 
 </body>
 @endsection

@@ -54,4 +54,7 @@ Route::get('/article/delete/{id}','ArticleController@delete');
 Route::post('/reaction/create','ArticleController@create2');
 Route::get('/reaction/delete/{id}','ArticleController@delete2');
 
+Route::get('/article/cetak_pdf', 'ArticleController@cetak_pdf');
+
+
 
