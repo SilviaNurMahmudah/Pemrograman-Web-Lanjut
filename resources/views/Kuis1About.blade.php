@@ -71,7 +71,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
           <div class="count-box">
             <i class="icofont-document-folder"></i>
-            <span data-toggle="counter-up">15</span>
+            <span data-toggle="counter-up">9</span>
             <p>Article</p>
           </div>
         </div>

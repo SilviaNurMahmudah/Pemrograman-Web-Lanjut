@@ -13,7 +13,7 @@
         <p>Manage My Article</p>
       </div>
 
-      <a href="/articleadd"  class="btn btn-primary">Tambah Data</a>
+      <a href="/article/add"  class="btn btn-primary">Tambah Data</a>
       <a href="/article/cetak_pdf" class="btn btn-primary" target="_blank">Cetak PDF</a>
 
       <br><br>
@@ -25,7 +25,7 @@
           <div class="resume-item pb-0">
             <h4>{{$a->id}}.{{$a->title}}</h4>
             <p><em>{{$a->created_at}}</em></p>
-            <h5><a href="/articleedit{{ $a->id }}" class="badge badgedanger">Edit</a></h5>
+            <h5><a href="/article/edit/{{ $a->id }}" class="badge badgedanger">Edit</a></h5>
             <h5><a href="/article/delete/{{ $a->id }}" class="badge badgedanger">Hapus</a></h5>
             <br><br>
           </div>

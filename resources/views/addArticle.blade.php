@@ -20,7 +20,7 @@
 
 <div id="contact" class="contact">
     <div class="container">
-      <form class="php-email-form mt-4" action="/article/create" method="post">
+      <form class="php-email-form mt-4" action="/article/create" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="title">Judul</label>
