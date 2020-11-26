@@ -20,14 +20,13 @@
       
       <!-- manage article -->
       <div class="row">
-      @php $i=1 @endphp
-        @foreach($article as $a)
+      
+        @foreach($reaction as $r)
         <div class="col-lg-6">
           <div class="resume-item pb-0">
-            <h4>{{$i++}}.{{$a->title}}</h4>
-            <h5 style="color:#000000">{{$a->content}}</h5>
-            <h6 style="color:#000000">{{$a->imageUrl}}</h6>
-            <p><em style="color:#999999">{{$a->created_at}}</em></p>
+            <h4>{{$r->name}}</h4>
+            <h5 style="color:#000000">{{$r->content}}</h5>6>
+            <p><em style="color:#999999">{{$r->created_at}}</em></p>
             <br><br>
           </div>
         </div>

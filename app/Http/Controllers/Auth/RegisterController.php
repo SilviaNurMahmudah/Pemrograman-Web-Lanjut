@@ -69,6 +69,7 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'roles' => 'User'
+            // 'profilUrl' => 'https://i1.wp.com/uxid.org/wp-content/uploads/2019/03/user-kosong.png?fit=300%2C300&ssl=1'
         ]);
     }
 }

@@ -19,7 +19,8 @@
   <link rel="dns-prefetch" href="//fonts.gstatic.com">
 
   <!-- Styles -->
-  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('kuis1/style.css') }}" rel="stylesheet">
+  <script src="{{ asset('kuis1/js/main.js') }}" defer></script>
   
   <!-- Vendor CSS Files -->
   <link href="kuis1/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -43,7 +44,7 @@
 <!-- ======= Header ======= -->
 <header id="header" class="header-tops">
     <div class="container">
-      <h1>Silvia Nur Mahmudah</h1>
+      <h1>Silvia's Website</h1>
       <h2>Welcome to <span>  My Website</span></h2>
 
       <nav class="nav-menu d-none d-lg-block">
@@ -86,22 +87,24 @@
                         <a class="dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
+                            <font color='black'>
                                 {{ __('Logout') }}
+                            </font>
                         </a>
 
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                         </form>
+                        <a href='/pp/$User->id'><font color='black'>photo profile</font></a>
                     </div>
                 </li>
             @endguest
-        </ul>
-      </nav><!-- .nav-menu --> 
+        </ul>        
+      </nav><!-- .nav-menu -->      
     </div>
 </header><!-- End Header -->
 
 @yield('konten')
-
 
 </body>
 
@@ -122,8 +125,5 @@
 
   <!-- Template Main JS File -->
   <script src="kuis1/js/main.js"></script>
-
-  <!-- Scripts -->
-  <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
 </html>

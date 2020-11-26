@@ -63,7 +63,7 @@
         <div class="col-lg-3 col-md-6">
           <div class="count-box">
             <i class="icofont-users-alt-5"></i>
-            <span data-toggle="counter-up">232</span>
+            <span>232</span>
             <p>Guests Blog</p>
           </div>
         </div>
@@ -71,7 +71,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
           <div class="count-box">
             <i class="icofont-document-folder"></i>
-            <span data-toggle="counter-up">9</span>
+            <span>9</span>
             <p>Article</p>
           </div>
         </div>
@@ -80,7 +80,7 @@
         <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
           <div class="count-box">
             <i class="icofont-simple-smile"></i>
-            <span data-toggle="counter-up">7</span>
+            <span>7</span>
             <p>Reaction</p>
           </div>
         </div>
@@ -88,35 +88,29 @@
       </div>
     </div><!-- End Counts -->
   
-       
+   <!-- ======= Testimonials ======= -->
+  <div class="testimonials container">
 
-    <!-- ======= Services Section ======= -->
-  <div id="services" class="services">
-    <div class="container">
+  <div class="section-title">
+    <h2>Reaction</h2>
+    <p>Reaction</p>
+  </div>
 
-      <div class="section-title">
-        <h2>Reaction</h2>
-        <p>Reaction</p>
-      </div>
-
-      
-      <div class="row">
-        @foreach($Reaction as $Re)
-        <div class="col-lg-4 col-md-6 d-flex align-items-stretch">  
-          <div class="icon-box">
-          
-            <div class="icon"><i class="bx bx-file"></i></div>
-            <h4><a href="">{{$Re->name}}</a></h4>
-            <p>{{$Re->content}}</p>
-          </div>
-        </div>
-        @endforeach
-        <br>
-      </div>
-     <br><br>
+  <div class="owl-carousel testimonials-carousel">
+  @foreach($Reaction as $Re)
+    <div class="testimonial-item">
+      <p>
+        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+        {{$Re->content}}
+        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+      </p>
+      <h3>{{$Re->name}}</h3>
     </div>
-  </div><!-- End Services Section -->
-  
+  @endforeach
+  </div>
+
+  </div><!-- End Testimonials  -->    
+<br><br><br>  
 </div>
 
 </body>

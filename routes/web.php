@@ -51,10 +51,14 @@ Route::post('/article/update/{id}','ArticleController@update');
 
 Route::get('/article/delete/{id}','ArticleController@delete');
 
-Route::post('/reaction/create','ArticleController@create2');
-Route::get('/reaction/delete/{id}','ArticleController@delete2');
+Route::post('/reaction/create','ReactionController@create');
+Route::get('/reaction/delete/{id}','ReactionController@delete');
 
 Route::get('/article/cetak_pdf', 'ArticleController@cetak_pdf');
+Route::get('/reaction/cetak_pdf', 'ReactionController@cetak_pdf');
 
+Route::get('/user/delete/{id}', 'ReactionController@delete2');
+Route::get('/pp/{id}', 'ReactionController@pp');
+Route::get('/user/cetak_pdf', 'ReactionController@cetak_pdf2');
 
 

@@ -62,28 +62,6 @@ class ArticleController extends Controller
         return redirect('/manage');
     }
 
-    public function create2(Request $request) {
-        Reaction::create([
-        'name' => $request->name,
-        'content' => $request->content,
-        ]);
-        return redirect('/home');
-    }
-    public function delete2($id){
-        $reaction = Reaction::find($id);
-        if(empty($reaction)) {
-            return;
-        }
-        $reaction->delete();
-        return redirect('/manage');
-    }
-    public function __construct() {
-        //$this->middleware('auth');
-        $this->middleware(function($request, $next){
-            if(Gate::allows('manage-articles')) return $next($request);
-            abort(403, 'Anda tidak memiliki cukup hak akses');
-        });
-    }
     public function cetak_pdf(){
         $article = Article::all();
         $pdf = PDF::loadview('articles_pdf',['article'=>$article]);

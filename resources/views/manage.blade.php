@@ -37,6 +37,8 @@
       <div class="section-title">
         <p>Manage My Reaction</p>
       </div>
+      <a href="/reaction/cetak_pdf" class="btn btn-primary" target="_blank">Cetak PDF</a>
+      <br><br>
 
       <!-- manage reaction -->
       <div class="row">
@@ -45,12 +47,21 @@
           <div class="resume-item pb-0">
             <h4>{{$r->name}}</h4>
             <p><em>{{$r->created_at}}</em></p>
-            <h5><a href="reaction/delete/{{ $r->id }}" class="badge badgedanger">Hapus</a></h5>
+            <h5><a href="/reaction/delete/{{ $r->id }}" class="badge badgedanger">Hapus</a></h5>
             <br><br>
           </div>
         </div>
         @endforeach  
       </div>
+      <br><br>
+
+      <div class="section-title">
+        <p>Manage My Users</p>
+      </div>
+      <a href="/user/cetak_pdf" class="btn btn-primary" target="_blank">Cetak PDF</a>
+
+      <!-- manage user -->
+      
     </div>
   </div>
   <br><br>
