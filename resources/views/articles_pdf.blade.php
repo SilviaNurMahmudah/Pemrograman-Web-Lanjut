@@ -20,7 +20,7 @@
       
       <!-- manage article -->
       <div class="row">
-      @php $i=1 @endphp
+      
         @foreach($article as $a)
         <div class="col-lg-6">
           <div class="resume-item pb-0">
