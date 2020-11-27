@@ -73,6 +73,12 @@
             @endcan
           </li>
 
+          <li class="nav-item {{ Route::is('manageUser') ? 'active' : '' }}">
+            @can('manage-articles')
+            <a href="{{route('manageUser')}}">Manage User</a>
+            @endcan
+          </li>
+
           @guest
             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a></li>
             @if (Route::has('register'))
@@ -95,7 +101,6 @@
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                         </form>
-                        <a href='/pp/$User->id'><font color='black'>photo profile</font></a>
                     </div>
                 </li>
             @endguest

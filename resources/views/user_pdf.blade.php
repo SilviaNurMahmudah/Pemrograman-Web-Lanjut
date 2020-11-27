@@ -13,7 +13,7 @@
 
       <div class="section-title">
         <h2>Membuat Laporan PDF Dengan DOMPDF Laravel</h2>
-        <p style="color:#999999">My Article</p>
+        <p style="color:#999999">My Users</p>
       </div>
 
       <br><br>
@@ -26,7 +26,7 @@
           <div class="resume-item pb-0">
             <h4>{{$u->name}}</h4>
             <h5 style="color:#000000">{{$u->email}}</h5>
-            <h6 style="color:#000000">{{$u->password}}</h6>
+            <h6 style="color:#000000">{{$u->profilUrl}}</h6>
             <p><em style="color:#999999">{{$u->created_at}}</em></p>
             <br><br>
           </div>

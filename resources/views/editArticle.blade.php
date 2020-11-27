@@ -36,11 +36,12 @@
             <input type="file" class="form-control" required="required" name="image" value="{{$article->imageUrl}}"></br>
         </div>
         <div>
-            <img src="{{asset('storage/'.$article->imageUrl)}}">
+            <img width="150px" src="{{asset('storage/'.$article->imageUrl)}}">
         </div>
         <div class="text-center"><button type="submit" name="edit">Ubah Data</button></div>
         </form>
     </div>
+    <br><br>
 </div>
 </body>
 @endsection

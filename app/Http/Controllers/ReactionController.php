@@ -37,24 +37,4 @@ class ReactionController extends Controller
             abort(403, 'Anda tidak memiliki cukup hak akses');
         });
     }
-
-
-    //User
-    public function delete2($id){
-        $user = User::find($id);
-        if(empty($reaction)) {
-            return;
-        }
-        $user->delete();
-        return redirect('/manage');
-    }
-    public function pp($id) {
-    	$User = User::find($id);
-		return view('fotoprofil',['User'=>$User]);
-    }
-    public function cetak_pdf2(){
-        $user = User::all();
-        $pdf = PDF::loadview('user_pdf',['user'=>$user]);
-        return $pdf->stream();
-    }
 }

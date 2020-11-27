@@ -53,14 +53,7 @@
         </div>
         @endforeach  
       </div>
-      <br><br>
-
-      <div class="section-title">
-        <p>Manage My Users</p>
-      </div>
-      <a href="/user/cetak_pdf" class="btn btn-primary" target="_blank">Cetak PDF</a>
-
-      <!-- manage user -->
+      <br><br>   
       
     </div>
   </div>

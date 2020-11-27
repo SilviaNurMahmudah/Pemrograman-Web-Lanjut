@@ -57,8 +57,11 @@ Route::get('/reaction/delete/{id}','ReactionController@delete');
 Route::get('/article/cetak_pdf', 'ArticleController@cetak_pdf');
 Route::get('/reaction/cetak_pdf', 'ReactionController@cetak_pdf');
 
-Route::get('/user/delete/{id}', 'ReactionController@delete2');
-Route::get('/pp/{id}', 'ReactionController@pp');
-Route::get('/user/cetak_pdf', 'ReactionController@cetak_pdf2');
+Route::get('/manageUser', 'UserController@index')->name('manageUser');
+Route::get('/user/cetak_pdf', 'UserController@cetak_pdf');
+Route::get('/user/delete/{id}', 'UserController@delete');
+Route::get('/user/edit/{id}', 'UserController@pp');
+Route::post('/user/update/{id}','UserController@update');
+
 
 
