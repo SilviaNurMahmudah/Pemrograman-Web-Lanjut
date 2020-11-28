@@ -33,10 +33,6 @@ class UserController extends Controller
 
     public function update($id, Request $request){
         $user = User::find($id);
-        $user->name = $request->name;
-        $user->email = $request->email;
-        $user->password = $request->password;
-        $user->roles = $request->roles;
         
         if($user->profilUrl && file_exists(storage_path('app/public/' . $user->profilUrl)))
         {
@@ -48,7 +44,7 @@ class UserController extends Controller
 
         $user->save();
 
-        return redirect('/profil');
+        return redirect('/manageUser');
     }
     public function __construct() {
         //$this->middleware('auth');
@@ -58,3 +54,5 @@ class UserController extends Controller
         });
     }
 }
+
+        

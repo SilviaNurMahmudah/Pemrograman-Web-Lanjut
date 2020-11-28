@@ -25,8 +25,8 @@
         <div class="col-lg-6">
           <div class="resume-item pb-0">
             <h4>{{$u->name}}</h4>
-            <h5 style="color:#000000">{{$u->email}}</h5>
-            <h6 style="color:#000000">{{$u->profilUrl}}</h6>
+            <h5 style="color:#000000">email : {{$u->email}}</h5>
+            <h6 style="color:#000000">{{$u->profilUrl}}</h5>
             <p><em style="color:#999999">{{$u->created_at}}</em></p>
             <br><br>
           </div>

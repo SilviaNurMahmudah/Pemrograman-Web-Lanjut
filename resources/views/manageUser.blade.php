@@ -20,6 +20,7 @@
           <div class="resume-item pb-0">
             <h4>{{$u->name}}</h4>
             <p><em>{{$u->email}}</em></p>
+            <img width="80px" src="{{asset('storage/'.$u->profilUrl)}}"><br><br>
             <h5><a href="/user/edit/{{ $u->id }}" class="badge badgedanger">Edit</a></h5>
             <h5><a href="/user/delete/{{ $u->id }}" class="badge badgedanger">Hapus</a></h5>
             <br><br>

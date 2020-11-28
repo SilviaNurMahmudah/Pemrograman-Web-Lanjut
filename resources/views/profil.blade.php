@@ -25,32 +25,14 @@
         <form class="php-email-form mt-4" action="/user/update/{{$user->id}}" method="post" enctype="multipart/form-data">
         {{csrf_field()}}
         <input type="hidden" name="id" value="{{$user->id}}"></br>
-        <div class="form-group">
-          <label for="title">Nama</label>
-          <input type="text" class="form-control" required="required" name="title" value="{{$user->name}}"></br>
-        </div>
-
-        <div class="form-group">
-          <label for="content">Email</label>
-          <input type="text" class="form-control" required="required" name="content" value="{{$user->email}}"></br>
-        </div>
-
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" required="required" name="password" value="{{$user->password}}"></br>
-        </div>
-
-        <div class="form-group">
-            <label for="roles">Roles</label>
-            <input type="text" class="form-control" required="required" name="roles" value="{{$user->roles}}"></br>
-        </div>
+        
         
         <div class="form-group">
             <label for="image">Image</label>
             <input type="file" class="form-control" required="required" name="image" value="{{$user->profilUrl}}"></br>
         </div>
         <div>
-            <img width="80px" src="{{asset('storage/'.$user->imageUrl)}}">
+            <img width="80px" src="{{asset('storage/'.$user->profilUrl)}}">
         </div>
         <div class="text-center"><button type="submit" name="edit">Ubah Data</button></div>
         </form>
